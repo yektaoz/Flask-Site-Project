@@ -116,21 +116,19 @@
         </a>
 
         <div class="user_option">
-          <form class="form-inline">
-            <button class="btn  nav_search-btn" type="submit">
-              <i class="fa fa-search" aria-hidden="true"></i>
-            </button>
-          </form>
+          <a href="{{ url_for('auth.logout') }}" style="margin-top: 25px;">
+              <i class="fa fa-home" aria-hidden="true"></i>
+          </a>
 
           {% if current_user.is_authenticated %}
 
-          <a href="{{ url_for('auth.logout') }}">
+          <a href="{{ url_for('auth.logout') }}" style="margin-top: 25px;">
             <i class="fa fa-sign-out" aria-hidden="true"></i>
           </a>
 
           {% else %}
 
-          <a href="{{ url_for('auth.login') }}">
+          <a href="{{ url_for('auth.login') }}"  style="margin-top: 25px;">
             <i class="fa fa-user" aria-hidden="true"></i>
           </a>
 
@@ -243,11 +241,11 @@
             </div>
   
             <div class="btn-box">
-              <a href="" class="btn-1">
+              <a href="{{ url_for('contact') }}" class="btn-1">
                 Contact Us
               </a>
-              <a href="" class="btn-2">
-                Read More
+              <a href="{{ url_for('service') }}" class="btn-2">
+                Our Services
               </a>
             </div>
           </div>
@@ -295,39 +293,25 @@
               Address
             </h4>
             <div class="contact_link_box">
-              <a href="">
+              <a href="https://maps.google.com">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                 <span>
                   Location
                 </span>
               </a>
-              <a href="">
+              <a href="tel:+496170961709">
                 <i class="fa fa-phone" aria-hidden="true"></i>
                 <span>
                   Call +01 1234567890
                 </span>
               </a>
-              <a href="">
+              <a href="mailto:demo@gmail.com">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <span>
                   demo@gmail.com
                 </span>
               </a>
             </div>
-          </div>
-          <div class="info_social">
-            <a href="">
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-linkedin" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-            </a>
           </div>
         </div>
         <div class="col-md-3">
@@ -373,7 +357,33 @@
             </p>
           </div>
         </div>
+
+
+
         <div class="col-md-3">
+
+          <h4>
+            Social Media
+          </h4>
+
+        <div class="info_social">
+          <a href="https://facebook.com/">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a href="https://twitter.com/">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="https://linkedin.com/">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+          <a href="https://instagram.com/">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+        <!--
+
+    <div class="col-md-3">
           <h4>
             Subscribe
           </h4>
@@ -384,6 +394,10 @@
             </button>
           </form>
         </div>
+
+        -->
+    
+
       </div>
     </div>
   </section>
