@@ -612,6 +612,19 @@ a:focus {
   color: #ffffff;
 }
 
+.detailpage_section .detail-box a {
+  display: inline-block;
+  background-color: #0a1b89;
+  color: #787878;
+  padding: 10px 40px;
+  border-radius: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: none;
+  margin-top: 15px;
+}
+
+
 .about_section .heading_container h2 {
   text-transform: uppercase;
 }
@@ -687,12 +700,22 @@ a:focus {
   bottom: -12%;
 }
 
+.detailpage_section .img-box img {
+  width: 50%;
+  position: relative;
+  z-index: 1;
+  background-color: #515151;
+  -webkit-box-shadow: 0 0 8px 0 rgba(0, 191, 45, 0.25);
+          box-shadow: 0 0 8px 0 rgba(0, 136, 25, 0.25);
+          
+}
+
 .about_section .img-box img {
   width: 100%;
   position: relative;
   z-index: 1;
-  -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.25);
-          box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 0 8px 0 rgba(0, 191, 45, 0.25);
+          box-shadow: 0 0 8px 0 rgba(0, 136, 25, 0.25);
 }
 
 .help_section {
