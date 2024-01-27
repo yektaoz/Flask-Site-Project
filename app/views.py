@@ -54,6 +54,24 @@ def cart(id):
 
 
 
+@app.route('/success')
+def success():
+    return render_template('success.html')
+
+
+@app.route('/contact', methods=['POST'])
+def handle_contact_form():
+    if request.method == 'POST':
+        # Form verilerini alın
+        email = request.form.get('email')
+        phone = request.form.get('phone')
+        message = request.form.get('message')
+
+        # Verileri işleyin (örneğin, veritabanına kaydedin)
+        # Burada eksik. Verileri nasıl işleyeceğinizi ve başka bir sayfaya nasıl yönlendireceğinizi ekleyin
+
+        # Başka bir sayfaya yönlendirin (örneğin, başarı sayfasına)
+        return redirect(url_for('success'))
 
 
   
