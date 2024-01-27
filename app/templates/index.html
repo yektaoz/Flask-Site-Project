@@ -7,10 +7,6 @@
 {% block title %}
 
 
-
-Home
-
-
 {% endblock %}
 
   <!-- feature section -->
@@ -133,22 +129,26 @@ Home
               </h2>
             </div>
             <p>
-              using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a searchusing 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search
+              'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a searchusing 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search
             </p>
             <a href="">
-              See Videos
+               Contact Us
             </a>
           </div>
         </div>
         <div class="col-md-6">
           <div class="img-box">
-            <img src="{{ url_for('static', filename='images/help-img.jpg') }}" alt="" />
+            <video id="myVideo" width="512" height="512" controls>
+                <source src="{{ url_for('static', filename='videos/exampleVideo.mp4') }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        
             <div class="play_btn">
-              <button>
-                <i class="fa fa-play" aria-hidden="true"></i>
-              </button>
+                <button id="playButton">
+                    <i class="fa fa-play" aria-hidden="true"></i>
+                </button>
             </div>
-          </div>
+        </div>
         </div>
       </div>
     </div>
@@ -420,6 +420,28 @@ Home
   </section>
 
   <!-- end contact section -->
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var video = document.getElementById('myVideo');
+        var playButton = document.getElementById('playButton');
+
+        playButton.addEventListener('click', function () {
+            if (video.paused || video.ended) {
+                video.play();
+                playButton.style.display = 'none';
+            } else {
+                video.pause();
+                playButton.style.display = 'block';
+            }
+        });
+
+        video.addEventListener('ended', function () {
+            playButton.style.display = 'block';
+        });
+    });
+</script>
 
 
 

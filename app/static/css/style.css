@@ -6,6 +6,10 @@ body {
   overflow-x: hidden;
 }
 
+#myVideo:not([controls]) + .play_btn {
+  display: none;
+}
+
 .layout_margin {
   margin-top: 90px;
   margin-bottom: 90px;
@@ -748,6 +752,7 @@ a:focus {
   outline: none;
 }
 
+/*  Shut down the animation
 .help_section .img-box .play_btn:before, .help_section .img-box .play_btn:after {
   content: "";
   width: 100%;
@@ -761,6 +766,9 @@ a:focus {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
+
+
+
 
 .help_section .img-box .play_btn:before {
   z-index: 2;
@@ -825,6 +833,8 @@ a:focus {
     opacity: 0;
   }
 }
+
+*/
 
 .help_section .img-box:before {
   content: "";
