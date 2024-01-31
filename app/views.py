@@ -43,6 +43,10 @@ def testimonial():
     return render_template('testimonial.html')
 
 
+@app.route('/admin')
+def admin():
+    return render_template('admin.html')
+
 @app.route("/purchase/<int:id>")
 def purchase_movie(id):
     movie = Movie.query.get_or_404(id)
